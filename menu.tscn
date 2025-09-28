@@ -1,0 +1,143 @@
+[gd_scene load_steps=9 format=3 uid="uid://dhof5p0pqb0vn"]
+
+[ext_resource type="Texture2D" uid="uid://dkad85btmxmq4" path="res://daydream.jpg" id="1_mae5d"]
+[ext_resource type="Script" uid="uid://byrmv38wmus3m" path="res://start_button.gd" id="2_ouk20"]
+[ext_resource type="FontFile" uid="uid://lgfdm3jiogr1" path="res://GrapeSoda.ttf" id="3_mae5d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4hy44"]
+texture = ExtResource("1_mae5d")
+modulate_color = Color(0.5211406, 0.5211406, 0.5211405, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ouk20"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_vsb4k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mae5d"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="GDScript" id="GDScript_mae5d"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 3.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -4.0
+offset_right = 1281.0
+offset_bottom = 716.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_4hy44")
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -32.5
+offset_right = 125.0
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ouk20")
+text = "Start
+"
+icon = SubResource("ViewportTexture_vsb4k")
+script = ExtResource("2_ouk20")
+
+[node name="Controlsbutton" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -123.0
+offset_top = 44.0
+offset_right = 127.0
+offset_bottom = 109.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ouk20")
+text = "Controls
+"
+icon = SubResource("ViewportTexture_vsb4k")
+script = ExtResource("2_ouk20")
+
+[node name="Quitbutton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -121.0
+offset_top = 119.0
+offset_right = 129.0
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_mae5d")
+text = "Quit"
+icon = SubResource("ViewportTexture_vsb4k")
+script = SubResource("GDScript_mae5d")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -582.0
+offset_top = 1.0
+offset_right = 561.0
+offset_bottom = 182.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_mae5d")
+theme_override_font_sizes/font_size = 90
+text = "                      
+              SKYBOUND"
+
+[connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]
+[connection signal="pressed" from="Controlsbutton" to="StartButton" method="_on_controlsbutton_pressed"]
+[connection signal="pressed" from="Quitbutton" to="StartButton" method="_on_quitbutton_pressed"]

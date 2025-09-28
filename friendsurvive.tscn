@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7frl0te1ngc5"]
+
+[ext_resource type="FontFile" uid="uid://d1xx217cfjrdx" path="res://sweet_toffee/Sweet Toffee.ttf" id="1_uanpi"]
+
+[sub_resource type="GDScript" id="GDScript_uanpi"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://youdied].tscn\")
+"
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1277.0
+offset_bottom = 715.0
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_right = 1279.0
+offset_bottom = 718.0
+theme_override_fonts/font = ExtResource("1_uanpi")
+theme_override_font_sizes/font_size = 60
+text = "You Chose To Save Your Friend Instead Of Saving YourSelf
+
+Thats Very Nice Of You!
+
+- SACRIFICES MUST BE MADE"
+script = SubResource("GDScript_uanpi")
+
+[connection signal="pressed" from="Panel/Button" to="Panel/Button" method="_on_pressed"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5wvueh3b83m0"]
+
+[ext_resource type="Texture2D" uid="uid://cywcb68fg3qu6" path="res://prisoner-removebg-preview.png" id="1_pjdvi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_37vrh"]
+size = Vector2(161, 174.5)
+
+[node name="Node" type="Node"]
+
+[node name="prisoer" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="prisoer"]
+position = Vector2(306, 197)
+texture = ExtResource("1_pjdvi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="prisoer"]
+position = Vector2(311.5, 224.75)
+shape = SubResource("RectangleShape2D_37vrh")

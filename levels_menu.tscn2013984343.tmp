@@ -1,0 +1,119 @@
+[gd_scene load_steps=3 format=3 uid="uid://bin5bqjf12g64"]
+
+[ext_resource type="FontFile" uid="uid://dcdev26lwkw3j" path="res://star_space/Star Space.ttf" id="1_fpmk7"]
+[ext_resource type="Script" uid="uid://cepwaeqamqaul" path="res://button.gd" id="2_svern"]
+
+[node name="LevelsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -3.0
+offset_right = -1.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Level 1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 8.0
+offset_right = 260.0
+offset_bottom = 216.0
+theme_override_fonts/font = ExtResource("1_fpmk7")
+theme_override_font_sizes/font_size = 60
+text = "Level
+1"
+
+[node name="Level 2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 10.0
+offset_right = 544.0
+offset_bottom = 218.0
+theme_override_fonts/font = ExtResource("1_fpmk7")
+theme_override_font_sizes/font_size = 60
+text = "Level 
+2"
+
+[node name="Level 3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 587.0
+offset_top = 8.0
+offset_right = 815.0
+offset_bottom = 216.0
+theme_override_fonts/font = ExtResource("1_fpmk7")
+theme_override_font_sizes/font_size = 60
+text = "Level 
+3"
+
+[node name="Level 4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 875.0
+offset_top = 7.0
+offset_right = 1103.0
+offset_bottom = 215.0
+theme_override_fonts/font = ExtResource("1_fpmk7")
+theme_override_font_sizes/font_size = 60
+text = "Level
+ 4"
+
+[node name="Level 5" type="Button" parent="."]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 238.0
+offset_right = 263.0
+offset_bottom = 446.0
+theme_override_fonts/font = ExtResource("1_fpmk7")
+theme_override_font_sizes/font_size = 60
+text = "Level 
+5"
+
+[node name="Level 6" type="Button" parent="."]
+layout_mode = 0
+offset_left = 319.0
+offset_top = 240.0
+offset_right = 547.0
+offset_bottom = 448.0
+theme_override_fonts/font = ExtResource("1_fpmk7")
+theme_override_font_sizes/font_size = 60
+text = "Level
+6
+"
+
+[node name="Level 7" type="Button" parent="."]
+layout_mode = 0
+offset_left = 590.0
+offset_top = 238.0
+offset_right = 818.0
+offset_bottom = 446.0
+theme_override_fonts/font = ExtResource("1_fpmk7")
+theme_override_font_sizes/font_size = 60
+text = "Level
+7
+"
+
+[node name="Level 8" type="Button" parent="."]
+layout_mode = 0
+offset_left = 878.0
+offset_top = 237.0
+offset_right = 1106.0
+offset_bottom = 445.0
+theme_override_fonts/font = ExtResource("1_fpmk7")
+theme_override_font_sizes/font_size = 60
+text = "Level
+8"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 477.0
+offset_right = 859.0
+offset_bottom = 563.0
+theme_override_fonts/font = ExtResource("1_fpmk7")
+theme_override_font_sizes/font_size = 60
+text = "Close"
+script = ExtResource("2_svern")
+
+[connection signal="pressed" from="QuitButton" to="QuitButton" method="_on_pressed"]

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c0ogeyxw7p63m"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 713.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1277.0
+offset_bottom = 711.0
+theme_override_font_sizes/font_size = 50
+text = "BENY BENY BENY BENY BENY BENY BENY BENY BENY 
+BENY BENY BENY BENY BENY BENY BENY BENY BENY 
+BENY BENY BENY BENY BENY BENY BENY BENY BENY 
+BENY BENY BENY BENY BENY BENY BENY BENY BENY 
+BENY BENY BENY BENY BENY BENY BENY BENY BENY 
+BENY BENY BENY BENY BENY BENY BENY BENY BENY 
+BENY BENY BENY BENY BENY BENY BENY BENY BENY 
+BENY BENY BENY BENY BENY BENY BENY BENY BENY 
+BENY BENY BENY BENY BENY BENY BENY BENY BENY 
+BENY BENY BENY BENY BENY BENY BENY BENY BENY "

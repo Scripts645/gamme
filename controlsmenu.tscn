@@ -1,0 +1,155 @@
+[gd_scene load_steps=5 format=3 uid="uid://bel06auktohvj"]
+
+[ext_resource type="FontFile" uid="uid://dcdev26lwkw3j" path="res://star_space/Star Space.ttf" id="1_7quv5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7quv5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7quv5"]
+
+[sub_resource type="GDScript" id="GDScript_mn33a"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://menu.tscn\")
+"
+
+[node name="Controlsmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_7quv5")
+
+[node name="Panel3" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 465.0
+offset_right = 1091.0
+offset_bottom = 594.0
+
+[node name="Label" type="Label" parent="Panel/Panel3"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 7.0
+offset_right = 1043.0
+offset_bottom = 135.0
+theme_override_fonts/font = ExtResource("1_7quv5")
+theme_override_font_sizes/font_size = 59
+text = "Jump - Space"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel4" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 325.0
+offset_right = 437.0
+offset_bottom = 454.0
+
+[node name="Label" type="Label" parent="Panel/Panel4"]
+layout_mode = 0
+offset_right = 389.0
+offset_bottom = 124.0
+theme_override_fonts/font = ExtResource("1_7quv5")
+theme_override_font_sizes/font_size = 59
+text = "Dash - CTRL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel5" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 181.0
+offset_right = 436.0
+offset_bottom = 310.0
+
+[node name="Label" type="Label" parent="Panel/Panel5"]
+layout_mode = 0
+offset_right = 385.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("1_7quv5")
+theme_override_font_sizes/font_size = 59
+text = "Walk Forward - D"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel7" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 698.0
+offset_top = 322.0
+offset_right = 1087.0
+offset_bottom = 451.0
+
+[node name="Label" type="Label" parent="Panel/Panel7"]
+layout_mode = 0
+offset_right = 385.0
+offset_bottom = 125.0
+theme_override_fonts/font = ExtResource("1_7quv5")
+theme_override_font_sizes/font_size = 59
+text = "Run - Shift"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel8" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 697.0
+offset_top = 178.0
+offset_right = 1086.0
+offset_bottom = 307.0
+
+[node name="Label" type="Label" parent="Panel/Panel8"]
+layout_mode = 0
+offset_right = 387.0
+offset_bottom = 132.0
+theme_override_fonts/font = ExtResource("1_7quv5")
+theme_override_font_sizes/font_size = 55
+text = "Walk Backwards - A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 17.0
+offset_right = 1054.0
+offset_bottom = 89.0
+
+[node name="Label" type="Label" parent="Panel2"]
+layout_mode = 0
+offset_right = 913.0
+offset_bottom = 78.0
+theme_override_fonts/font = ExtResource("1_7quv5")
+theme_override_font_sizes/font_size = 59
+text = "CONTROLS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 109.0
+offset_bottom = 98.0
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7quv5")
+text = "x"
+script = SubResource("GDScript_mn33a")
+
+[connection signal="pressed" from="BackButton" to="BackButton" method="_on_pressed"]

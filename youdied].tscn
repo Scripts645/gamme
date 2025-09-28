@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://ciskns7phxsgt"]
+
+[ext_resource type="Texture2D" uid="uid://c6r63gm6w4kxl" path="res://tttttt-removebg-preview.png" id="1_1tce6"]
+[ext_resource type="Texture2D" uid="uid://xdbidm6jp53r" path="res://Dying_KG_1.png" id="2_2rvay"]
+
+[sub_resource type="GDScript" id="GDScript_1tce6"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://menu.tscn\")
+"
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1288.0
+offset_bottom = 737.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel"]
+position = Vector2(289, 433)
+texture = ExtResource("1_1tce6")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Panel"]
+
+[node name="DyingKg1" type="Sprite2D" parent="Panel"]
+position = Vector2(467.00003, 408)
+scale = Vector2(4.3125, 3.71875)
+texture = ExtResource("2_2rvay")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.006
+anchor_bottom = 0.011000001
+offset_left = 1004.0
+offset_top = 4.0
+offset_right = 1261.326
+offset_bottom = 106.08
+text = "Main Menu"
+script = SubResource("GDScript_1tce6")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
